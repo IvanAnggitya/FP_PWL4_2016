@@ -1,4 +1,5 @@
 <?
+//ada perubahan disini
   $action = $_REQUEST["action"];
   switch($action){
       case "1":
