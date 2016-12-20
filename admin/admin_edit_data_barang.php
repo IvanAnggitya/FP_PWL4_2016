@@ -8,6 +8,7 @@ if(isset($_GET['id'])){
 		$merk_awal 	=$a['nama_barang'];
 		$gambar_awal=$a['foto_barang'];
 		$harga_awal	=$a['harga_barang'];
+		$deskripsi_awal=$a['deskripsi_barang'];
 	}
 }
 
@@ -15,6 +16,7 @@ if(isset($_POST['submit'])){
 	$merk =$_POST['merk'];
 	$jenis=$_POST['jenis'];
 	$harga=$_POST['harga'];
+	$deskripsi=$_POST['deskripsi'];
 
 	$nama 	= $_FILES['gambar']['name'];
 	$size 	= $_FILES['gambar']['size'];
@@ -26,7 +28,7 @@ if(isset($_POST['submit'])){
 
 	if($error===0){
 		if($format === "jpg" || $format === "png" || $format === "JPG" || $format === "PNG" ){
-			if(update_databarang($merk,$lokasi,$jenis,$harga, $id)){
+			if(update_databarang($merk,$lokasi,$jenis,$harga,$deskripsi, $id)){
 				header('location:admin_data_barang.php?='.$id);
 			}else{
 				echo "<script>alert('Update data Barang Gagal')</script>";
@@ -66,6 +68,10 @@ if(isset($_POST['submit'])){
 		<tr>
 			<td>Harga Barang</td>
 			<td><input type="number" name="harga" value="<?= $harga_awal;?>" required></td>
+		</tr>
+			<tr>
+			<td>Deskripsi</td>
+			<td><textarea rows="10" cols="40" name="deskripsi"><?= $deskripsi_awal;?></textarea></td>
 		</tr>
 
 		<tr>
