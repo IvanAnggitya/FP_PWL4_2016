@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 20, 2016 at 04:09 PM
+-- Generation Time: Dec 20, 2016 at 07:09 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.5.38
 
@@ -64,7 +64,8 @@ INSERT INTO `barang` (`id_barang`, `nama_barang`, `foto_barang`, `jenis_barang`,
 (56, 'Kemeja 1', 'fasion.jpg', 'Fashion Pria', 'M', '150000', 'Kemeja Pria Murah Meriah\r\n'),
 (57, 'Fashion Wanita', 'wanita.jpg', 'Fashion Wanita', 'L', '200000', 'Fashion Wanita Murah'),
 (58, 'Celana Jeans Wanita', 'Desain-Celana-Kodok-Panjang-Jeans-Cewek-Modis-2015.jpg', 'Fashion Wanita', 'M', '250000', 'Jeans Cantik'),
-(59, 'Fashion Anak', 'grosir-baju-bayi-2140.jpg', 'Fashion Lain', 'S', '50000', 'Baju anak usia Balita');
+(59, 'Fashion Anak', 'grosir-baju-bayi-2140.jpg', 'Fashion Lain', 'S', '50000', 'Baju anak usia Balita'),
+(60, 'Kemeja Formal Limited Edition', 'Kemeja.png', 'Fashion Pria', 'All size', '250000', 'Kemeja Formal Limited Edition. berbahan soft katun. cocok dipakai ketika beraktivitas diluar ruangan.');
 
 -- --------------------------------------------------------
 
@@ -103,6 +104,14 @@ CREATE TABLE `data_pembeli` (
   `alamat_pembeli` text NOT NULL,
   `pos` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `data_pembeli`
+--
+
+INSERT INTO `data_pembeli` (`id_pembeli`, `nama_barang`, `size`, `harga`, `nama_pembeli`, `email_pembeli`, `tlp_pembeli`, `alamat_pembeli`, `pos`) VALUES
+(1, 'Kemeja 1', 'S', 'Rp 150000', 'wahono', 'wahono@gmail.com', '8798709685', 'bantul', '8658658'),
+(2, 'Kemeja Formal Limited Edition', 'XXL', 'Rp 250000', 'Toni', 'fghjgf@gmail.com', '0796585678567854', 'jogja', '99685');
 
 -- --------------------------------------------------------
 
@@ -165,7 +174,7 @@ ALTER TABLE `komentar`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 --
 -- AUTO_INCREMENT for table `blog`
 --
@@ -175,7 +184,7 @@ ALTER TABLE `blog`
 -- AUTO_INCREMENT for table `data_pembeli`
 --
 ALTER TABLE `data_pembeli`
-  MODIFY `id_pembeli` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pembeli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `komentar`
 --
