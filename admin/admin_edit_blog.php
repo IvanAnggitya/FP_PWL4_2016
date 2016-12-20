@@ -41,7 +41,7 @@ if(isset($_POST['submit'])){
 
 
 ?>
-<h1 align="center">Tambah Data Barang</h1>
+<h1 align="center">Edit Artikel</h1>
 <form action="" method="post" enctype="multipart/form-data">
 	<table align="center">
 		<tr>
@@ -51,7 +51,10 @@ if(isset($_POST['submit'])){
 
 		<tr>
 			<td>Gambar</td>
-			<td><img width="100" height="100" src="../img/<?= $foto_awal;?>"><input type="file" name="gambar"></td>
+			<td><img width="100" height="100" src="../img/<?= $foto_awal;?>">
+			<br />
+			<br />
+			<input type="file" name="gambar"></td>
 		</tr>
 
 		<tr>

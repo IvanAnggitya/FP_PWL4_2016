@@ -43,6 +43,8 @@ if(isset($_POST['submit'])){
 
 		<tr>
 			<td>Gambar</td>
+			<br />
+			<br />
 			<td><input type="file" name="gambar" required></td>
 		</tr>
 
