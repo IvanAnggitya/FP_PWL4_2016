@@ -12,9 +12,7 @@ include_once 'akses/akses.php';
 
 
 <div id="head">
-	<p>Toko Amikom</p>
-  <input align="container-fluid" type="search" name="cari" id="cari" class="text" placeholder="Cari Barang">
-    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+<h1 align="center">Toko Amikom</h1>
 </div>
 
 <nav class="navbar navbar-default">
