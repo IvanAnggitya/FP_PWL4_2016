@@ -234,10 +234,10 @@ function tambahdata_penjual($nama,$alamat,$nomor,$sosmed,$email,$pass,$jenis){
 	}
 }
 
-function update_databarang($merk,$lokasi,$jenis,$harga,$id){
+function update_databarang($merk,$lokasi,$jenis,$harga,$deskripsi,$id){
 	global $link;
 
-	$query ="UPDATE barang SET nama_barang='$merk', foto_barang='$lokasi', jenis_barang='$jenis', harga_barang='$harga' WHERE id_barang='$id'";
+	$query ="UPDATE barang SET nama_barang='$merk', foto_barang='$lokasi', jenis_barang='$jenis', harga_barang='$harga' ,deskripsi_barang='$deskripsi'WHERE id_barang='$id'";
 	return run($query);
 }
 
